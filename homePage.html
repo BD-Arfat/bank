@@ -20,7 +20,7 @@
           <div class="artboard artboard-demo phone-1">
             <div class="flex justify-between items-center m-2 gap-24">
               <div>
-                <h1 class="font-bold text-3xl">5000</h1>
+                <h1 id="current-amount" class="font-bold text-3xl">5000</h1>
                 <p>Total Amount</p>
               </div>
               <div
@@ -55,7 +55,10 @@
             <!---->
             <!-- start card -->
             <div class="mt-4 grid grid-cols-3 gap-2 text-center m-2">
-              <div class="border border-gray-600 rounded-lg p-2">
+              <div
+                id="show-add-money"
+                class="border border-gray-600 rounded-lg p-2"
+              >
                 <img
                   class="w-6 rounded-full mx-auto"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_eFY419xgzl_YhKnddP39WPJuznhIvSBlCg&s"
@@ -63,7 +66,10 @@
                 />
                 <h1 class="font-bold text-sm">Add Money</h1>
               </div>
-              <div class="border border-gray-600 rounded-lg p-2">
+              <div
+                id="show-cash-out-button"
+                class="border border-gray-600 rounded-lg p-2"
+              >
                 <img
                   class="w-6 rounded-full mx-auto"
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMEXM0V6y5T1_io6jaJc4QFlD6cuQFHno7dA&s"
@@ -106,12 +112,13 @@
             </div>
             <!-- end card -->
             <!-- start form -->
-            <div class="">
+            <div id="add-money-form" class="">
               <form class="card-body">
                 <div class="flex gap-2">
                   <div class="form-control">
                     <input
                       type="text"
+                      id="fill-amount"
                       placeholder="Fill Amount"
                       class="input input-bordered w-full"
                       required
@@ -120,6 +127,7 @@
                   <div class="form-control">
                     <input
                       type="password"
+                      id="add-pin-number"
                       placeholder="Pin Number"
                       class="input input-bordered w-full"
                       required
@@ -127,15 +135,49 @@
                   </div>
                 </div>
                 <div class="form-control mt-2">
-                  <button class="btn btn-primary">Login</button>
+                  <button id="add-money-button" class="btn btn-primary">
+                    Add Money
+                  </button>
                 </div>
               </form>
             </div>
             <!-- end form -->
+            <!-- start Cash out form -->
+            <div id="cash-out-form" class="hidden">
+              <form class="card-body">
+                <div class="flex gap-2">
+                  <div class="form-control">
+                    <input
+                      type="text"
+                      id="fill-cashOut-amount"
+                      placeholder="Fill Amount"
+                      class="input input-bordered w-full"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <input
+                      type="password"
+                      id="cashOut-pin-number"
+                      placeholder="Pin Number"
+                      class="input input-bordered w-full"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-control mt-2">
+                  <button id="cash-out-button" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!-- end Cash out form -->
           </div>
         </div>
       </div>
     </main>
     <script src="js/homePage.js"></script>
+    <script src="js/feature.js"></script>
   </body>
 </html>
